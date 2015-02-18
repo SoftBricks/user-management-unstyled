@@ -14,6 +14,8 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
 
   api.use(['templating'], 'client');
+  api.use('softbricks:user-management', ['client', 'server']);
+  api.imply('softbricks:user-management@0.0.1', ['client', 'server']);
   //api.use(['accounts-password', 'underscore', 'check'], ['client', 'server']);
   //api.use(['useraccounts:core']);
   //api.use(['aldeed:autoform@4.2.2']);
@@ -33,8 +35,8 @@ Package.onUse(function(api) {
   //api.addFiles(['lib/core.js', 'lib/client.js'], 'client');
   //api.addFiles(['lib/umShowUsers.js'],'client');
   //api.addFiles('lib/templates/schema.js', ['client', 'server']);
-  api.addFiles(['lib/templates/addUser.html','lib/templates/editUser.html'], 'client');
-  api.addFiles(['lib/templates/showUsers.html','lib/templates/showUser.html'], 'client');
+  api.addFiles(['lib/templates/addUser.html','lib/templates/addUser.js','lib/templates/editUser.html','lib/templates/editUser.js'], 'client');
+  api.addFiles(['lib/templates/showUsers.html', 'lib/templates/showUsers.js','lib/templates/showUser.html','lib/templates/showUser.js'], 'client');
   //api.export('UserManagementTemplates', ['client', 'server']);
 });
 
