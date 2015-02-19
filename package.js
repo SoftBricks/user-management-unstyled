@@ -16,6 +16,8 @@ Package.onUse(function(api) {
   api.use(['templating'], 'client');
   api.use('softbricks:user-management', ['client', 'server']);
   api.imply('softbricks:user-management@0.0.1', ['client', 'server']);
+  api.use('alethes:pages');
+  api.imply('alethes:pages');
   //api.use(['accounts-password', 'underscore', 'check'], ['client', 'server']);
   //api.use(['useraccounts:core']);
   //api.use(['aldeed:autoform@4.2.2']);
