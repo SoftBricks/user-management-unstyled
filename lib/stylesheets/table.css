@@ -1,0 +1,9 @@
+.clickableRow {
+    cursor:pointer;
+    border:1px solid black;
+    padding-bottom: 2px;
+}
+.tableTd {
+    padding: 5px;
+    border: 1px solid gray;
+}

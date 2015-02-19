@@ -39,6 +39,7 @@ Package.onUse(function(api) {
   //api.addFiles('lib/templates/schema.js', ['client', 'server']);
   api.addFiles(['lib/templates/addUser.html','lib/templates/addUser.js','lib/templates/editUser.html','lib/templates/editUser.js'], 'client');
   api.addFiles(['lib/templates/showUsers.html', 'lib/templates/showUsers.js','lib/templates/showUser.html','lib/templates/showUser.js'], 'client');
+  api.addFiles(['lib/templates/userListItem.html','lib/templates/userListItem.js', 'lib/stylesheets/table.css'], 'client');
   //api.export('UserManagementTemplates', ['client', 'server']);
 });
 
