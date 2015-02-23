@@ -1,0 +1,27 @@
+<template name="umAddGroup">
+    {{#if groupschema}}
+        {{#autoForm schema=groupschema id="addGroupForm" type="method" meteormethod="createGroup" validation="keyup"}}
+            <fieldset>
+                <legend>Create Group</legend>
+                {{> afQuickField name="groupname" autocomplete="off"}}
+                {{> afQuickField name="leader" autocomplete="off"}}
+
+                {{#if groupschema.agency}}
+                    {{> afQuickField name="agency" autocomplete="off"}}
+                {{/if}}
+
+                {{#if groupschema.projects}}
+                    {{> afQuickField name="projects"}}
+                {{/if}}
+
+                {{> afQuickField name="parentGroup"}}
+                <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </div>
+            </fieldset>
+        {{/autoForm}}
+        {{else}}
+        Please add the package softbricks:user-management-groups to use this template
+    {{/if}}
+</template>
