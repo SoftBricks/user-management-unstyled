@@ -41,7 +41,9 @@ Package.onUse(function(api) {
   api.addFiles(['lib/templates/showUsers.html', 'lib/templates/showUsers.js','lib/templates/showUser.html','lib/templates/showUser.js'], 'client');
   api.addFiles(['lib/templates/userListItem.html','lib/templates/userListItem.js', 'lib/stylesheets/table.css','lib/templates/userSearch.html','lib/templates/userSearch.js'], 'client');
   //api.export('UserManagementTemplates', ['client', 'server']);
-  api.addFiles(['lib/templates/addGroup.html','lib/templates/addGroup.js'], 'client');
+  api.addFiles(['lib/templates/addGroup.html','lib/templates/addGroup.js','lib/templates/showGroups.html','lib/templates/showGroups.js'], 'client');
+  api.addFiles(['lib/templates/groupListItem.js','lib/templates/groupListItem.html','lib/templates/showGroup.html',
+    'lib/templates/showGroup.js','lib/templates/editGroup.js','lib/templates/editGroup.html'],'client');
 });
 
 //Package.onTest(function(api) {

@@ -1,0 +1,14 @@
+<template name="umShowGroups">
+    {{#if groupschema}}
+
+    <!--{{> umUserSearch}}-->
+    <button class="perPage" data-pp="5">5</button>
+    <button class="perPage" data-pp="10">10</button>
+    <span>{{perPage}}</span>
+    {{> pages}}
+    {{> pagesNav}}
+
+    {{else}}
+        Please add the package softbricks:user-management-groups to use this template
+    {{/if}}
+</template>

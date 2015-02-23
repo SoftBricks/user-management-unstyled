@@ -6,6 +6,9 @@
             {{> afQuickField name="emails.0.address" autocomplete="off"}}
             {{> afQuickField name="username" autocomplete="off"}}
             {{> afQuickField name="profile.admin"}}
+            {{#if groups}}
+                {{> afQuickField name="profile.groups"}}
+            {{/if}}
             {{> afQuickField name="profile.fields"}}
             <div>
                 <button type="submit" class="btn btn-primary">Submit</button>

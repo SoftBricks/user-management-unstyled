@@ -1,0 +1,16 @@
+<template name="umShowGroup">
+    {{#with group}}
+        {{#autoForm schema=groupschema doc=this id="addGroupForm"}}
+            <fieldset>
+                <legend>Show Group</legend>
+                {{> afQuickField name="groupname" autocomplete="off"}}
+                {{> afQuickField name="leader" autocomplete="off"}}
+            </fieldset>
+        {{/autoForm}}
+
+
+        <!-- </div> -->
+        <a href="/editGroup/{{_id}}">Edit</a>
+        <a href="/showGroups">Back</a>
+    {{/with}}
+</template>
