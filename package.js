@@ -14,23 +14,12 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0.3.1');
 
   api.use(['templating'], 'client');
-  api.use('softbricks:user-management', ['client', 'server']);
-  api.imply('softbricks:user-management@0.0.1', ['client', 'server']);
-  api.use('alethes:pages');
-  api.imply('alethes:pages');
-  //api.use(['accounts-password', 'underscore', 'check'], ['client', 'server']);
-  //api.use(['useraccounts:core']);
-  //api.use(['aldeed:autoform@4.2.2']);
-  //api.imply('aldeed:autoform');
-  //api.use(['aldeed:simple-schema@1.3.0']);
-  //api.imply('aldeed:simple-schema');
-  //api.use(['aldeed:collection2@2.3.2']);
-  //api.imply('aldeed:collection2');
 
-  // server
-  //api.addFiles('server/publications.js', 'server');
-  //api.addFiles('server/methods.js', 'server');
-  //api.addFiles('server/init.js', 'server');
+  api.use('softbricks:user-management@0.0.1', ['client', 'server']);
+  api.imply('softbricks:user-management', ['client', 'server']);
+
+  api.use(['useraccounts:unstyled']);
+  api.imply(['useraccounts:unstyled']);
 
   // client
   //api.addFiles(['lib/core.js', 'lib/server.js'], 'server');
