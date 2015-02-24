@@ -5,6 +5,12 @@
                 <legend>Show Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
                 {{> afQuickField name="leader" autocomplete="off"}}
+                Users
+                <ul>
+                    {{#each users}}
+                        {{useremail}}
+                    {{/each}}
+                </ul>
             </fieldset>
         {{/autoForm}}
 

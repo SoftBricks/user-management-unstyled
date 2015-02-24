@@ -6,7 +6,7 @@
                 {{> afQuickField name="groupname" autocomplete="off"}}
                 {{> afQuickField name="leader" id="leader" autocomplete="off"}}
                 <ul>
-                    {{#each getUsers}}
+                    {{#each getLeaders}}
                         <li class="fullname">{{email}}</li>
                     {{/each}}
                 </ul>
@@ -24,8 +24,6 @@
                         <li class="parentGroup">{{groupname}}</li>
                     {{/each}}
                 </ul>
-
-                {{> afQuickField name="users" autocomplete="off"}}
                 <div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-default">Reset</button>

@@ -24,10 +24,21 @@
                         <li class="parentGroup">{{groupname}}</li>
                     {{/each}}
                 </ul>
-                {{> afQuickField name="users" id=this.name autocomplete="off"}}
-                <ul>
+                <!--{{> afQuickField name="users" id=this.name autocomplete="off"}}-->
+                <!--<ul>-->
+                    <!--{{#each getUsersForGroup}}-->
+                        <!--<li class="user">{{email}}</li>-->
+                    <!--{{/each}}-->
+                <!--</ul>-->
+                <span>Users</span><input id="users"/>
+                <ul class="results" style="background-color: white">
                     {{#each getUsersForGroup}}
-                        <li class="user">{{email}}</li>
+                        <li><span class="clickableSpan" id="{{this._id}}">{{email}}</span></li>
+                    {{/each}}
+                </ul>
+                <ul>
+                    {{#each users}}
+                        {{useremail}}<span class="removeUser"> Remove</span>
                     {{/each}}
                 </ul>
                 <div>
