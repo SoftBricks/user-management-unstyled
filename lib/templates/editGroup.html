@@ -18,7 +18,7 @@
                     {{> afQuickField name="projects"}}
                 {{/if}}
 
-                {{> afQuickField name="parentGroup" id="parentGroupName"}}
+                {{> afQuickField value=parentGroupName name="parentGroup" id="parentGroupName"}}
                 <ul>
                     {{#each getSubGroups}}
                         <li class="parentGroup">{{groupname}}</li>
@@ -38,7 +38,7 @@
                 </ul>
                 <ul>
                     {{#each users}}
-                        {{useremail}}<span class="removeUser"> Remove</span>
+                        {{user}}<span class="removeUser"> Remove</span>
                     {{/each}}
                 </ul>
                 <div>

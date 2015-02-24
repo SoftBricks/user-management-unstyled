@@ -5,10 +5,11 @@
                 <legend>Show Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
                 {{> afQuickField name="leader" autocomplete="off"}}
+                {{> afQuickField value=parentGroupName name="parentGroup" autocomplete="off"}}
                 Users
                 <ul>
                     {{#each users}}
-                        {{useremail}}
+                        {{user}}
                     {{/each}}
                 </ul>
             </fieldset>
