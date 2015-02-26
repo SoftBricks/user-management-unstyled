@@ -13,9 +13,9 @@
                             {{> afQuickField name="profile.fields"}}
 
                             <div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <button id="removeUser" type="click" class="btn btn-primary">Remove</button>
-                                <a href="/showUser/{{_id}}">Back</a>
+                                <button type="submit" class="btn btn-primary">{{save}}</button>
+                                <button id="removeUser" type="click" class="btn btn-primary">{{remove}}</button>
+                                <a href="/showUser/{{_id}}">{{abort}}</a>
                             </div>
                         </fieldset>
                     {{/autoForm}}
