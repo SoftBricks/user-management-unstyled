@@ -1,7 +1,6 @@
 <template name="umAddUser">
     {{#autoForm schema=userschema id="createUserForm" type="method" meteormethod="createUserWithoutPassword" validation="keyup"}}
         <fieldset>
-            <legend>Create User</legend>
             {{> afQuickField name="profile.fullname" autocomplete="off"}}
             {{> afQuickField name="emails.0.address" autocomplete="off"}}
             {{> afQuickField name="username" autocomplete="off"}}

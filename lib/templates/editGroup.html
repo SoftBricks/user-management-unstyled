@@ -2,7 +2,6 @@
     {{#with group}}
         {{#autoForm schema=groupschema doc=this id="addGroupForm" type="method" meteormethod="updateGroup" validation="keyup"}}
             <fieldset>
-                <legend>Edit Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
                 {{> afQuickField value =leaderEmail name="leader" id="leader" autocomplete="off"}}
                 <ul>

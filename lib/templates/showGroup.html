@@ -2,7 +2,6 @@
     {{#with group}}
         {{#autoForm schema=groupschema doc=this id="addGroupForm"}}
             <fieldset>
-                <legend>Show Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
                 {{> afQuickField vale=leaderEmail name="leader" autocomplete="off"}}
                 {{> afQuickField value=parentGroupName name="parentGroup" autocomplete="off"}}
