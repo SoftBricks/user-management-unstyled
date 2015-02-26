@@ -4,7 +4,7 @@
             <fieldset>
                 <legend>Edit Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
-                {{> afQuickField name="leader" id="leader" autocomplete="off"}}
+                {{> afQuickField value =leaderEmail name="leader" id="leader" autocomplete="off"}}
                 <ul>
                     {{#each getLeaders}}
                         <li class="fullname">{{email}}</li>
