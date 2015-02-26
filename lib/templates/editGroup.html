@@ -29,7 +29,7 @@
                         <!--<li class="user">{{email}}</li>-->
                     <!--{{/each}}-->
                 <!--</ul>-->
-                <span>Users</span><input id="users"/>
+                <input id="users"/>
                 <ul class="results" style="background-color: white">
                     {{#each getUsersForGroup}}
                         <li><span class="clickableSpan" id="{{this._id}}">{{email}}</span></li>
@@ -41,9 +41,9 @@
                     {{/each}}
                 </ul>
                 <div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button id="removeGroup" type="click" class="btn btn-primary">Remove</button>
-                    <a href="/showGroup/{{_id}}">Back</a>
+                    <button type="submit" class="btn btn-primary">{{save}}</button>
+                    <button id="removeGroup" type="click" class="btn btn-primary">{{remove}}</button>
+                    <a href="/showGroup/{{_id}}">{{abort}}</a>
                 </div>
             </fieldset>
         {{/autoForm}}
