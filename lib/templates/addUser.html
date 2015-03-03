@@ -1,5 +1,5 @@
 <template name="umAddUser">
-    {{#autoForm schema=userschema id="createUserForm" type="method" meteormethod="createUserWithoutPassword" validation="keyup"}}
+    {{#autoForm schema=schema id="createUserForm" type="method" meteormethod="createUserWithoutPassword" validation="keyup"}}
         <fieldset>
             {{> afQuickField name="profile.fullname" autocomplete="off"}}
             {{> afQuickField name="emails.0.address" autocomplete="off"}}
@@ -9,6 +9,12 @@
                 {{> afQuickField name="profile.groups"}}
             {{/if}}
             {{> afQuickField name="profile.fields"}}
+
+            {{#each globalFields}}
+                {{this}}
+                <!--<input name="{{name}}"/>-->
+            {{/each}}
+
             <div>
                 <button type="submit" class="btn btn-primary">{{save}}</button>
                 <button type="reset" class="btn btn-default">{{abort}}</button>
