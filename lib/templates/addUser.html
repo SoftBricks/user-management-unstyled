@@ -11,8 +11,7 @@
             {{> afQuickField name="profile.fields"}}
 
             {{#each globalFields}}
-                {{this}}
-                <!--<input name="{{name}}"/>-->
+                {{> afQuickField name=this.name}}
             {{/each}}
 
             <div>

@@ -3,7 +3,7 @@
         <table>
             <tr>
                 <td>
-                    {{#autoForm schema=userschema doc=this id="createUserForm" type="method" meteormethod="updateUserInformation" validation="keyup"}}
+                    {{#autoForm collection=userschema doc=this id="createUserForm" type="update" validation="keyup"}}
                         <fieldset>
                             {{> afQuickField name="profile.fullname" autocomplete="off"}}
                             {{> afQuickField name="emails.0.address" autocomplete="off"}}
@@ -11,6 +11,10 @@
                             {{> afQuickField name="profile.admin"}}
                             {{> afQuickField name="profile.activated"}}
                             {{> afQuickField name="profile.fields"}}
+
+                            {{#each globalFields}}
+                                {{> afQuickField name=this.name}}
+                            {{/each}}
 
                             <div>
                                 <button type="submit" class="btn btn-primary">{{save}}</button>
