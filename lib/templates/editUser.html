@@ -12,8 +12,17 @@
                             {{> afQuickField name="username" autocomplete="off"}}
                             <!--{{> afQuickField name="profile.admin"}}-->
                             {{#if isInRole 'admin,superAdmin'}}
-                                <input type="checkbox" id="admin" name="admin" checked="{{admin}}"/>
-                                <label for="admin">Admin</label>
+                                {{#each currentRoles}}
+                                    {{#if isField 'superAdmin'}}
+                                        <input type="checkbox" disabled readonly id="{{this.name}}" name="roles" checked="{{userHasRight}}">
+                                        <label for="admin">{{this.name}}</label>
+                                    {{else}}
+                                        <input type="checkbox" id="{{this.name}}" name="roles" checked="{{userHasRight}}">
+                                        <label for="admin">{{this.name}}</label>
+                                    {{/if}}
+                                {{/each}}
+                                <!--<input type="checkbox" id="admin" name="admin" checked="{{admin}}"/>-->
+                                <!--<label for="admin">Admin</label>-->
                             {{/if}}
                             {{> afQuickField name="profile.activated"}}
                             {{> afQuickField name="profile.fields"}}
@@ -25,13 +34,27 @@
                             <div>
                                 <button type="submit" class="btn btn-primary">{{save}}</button>
                                 <button id="removeUser" type="click" class="btn btn-primary">{{remove}}</button>
+                                <button id="editRoles" type="click" class="btn btn-primary">Edit Roles</button>
                                 <a href="/showUser/{{_id}}">{{abort}}</a>
                             </div>
                         </fieldset>
                     {{/autoForm}}
+                    <img src="{{gravatar}}">
                 </td>
                 <td>
-                    <img src="{{gravatar}}">
+                    <ul>
+                        {{#each roles}}
+                            <li>
+                                {{#if isField 'superAdmin'}}
+                                    <input type="checkbox" disabled readonly id="{{this.name}}" name="roles" checked="{{userHasRight}}">
+                                    <label for="admin">{{this.name}}</label>
+                                {{else}}
+                                    <input type="checkbox" id="{{this.name}}" name="roles" checked="{{userHasRight}}"/>
+                                    <label for="{{this.name}}">{{this.name}}</label>
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
                 </td>
             </tr>
         </table>

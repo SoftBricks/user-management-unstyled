@@ -1,0 +1,12 @@
+<template name="umAddRole">
+    {{#autoForm collection=collection id="addRole" type="insert" validation="keyup"}}
+        <fieldset>
+            {{> afQuickField name="name" autocomplete="off"}}
+
+            <div>
+                <button type="submit" class="btn btn-primary">save</button>
+                <a href="/manageRoles">Back</a>
+            </div>
+        </fieldset>
+    {{/autoForm}}
+</template>

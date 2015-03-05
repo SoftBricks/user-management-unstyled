@@ -1,0 +1,11 @@
+<template name="umManageRoles">
+    <table border="2">
+        {{#each roles}}
+            <tr>
+                <td>{{name}}</td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <a href="/addRole">Add</a>
+</template>

@@ -32,7 +32,9 @@ Package.onUse(function(api) {
   //api.export('UserManagementTemplates', ['client', 'server']);
   api.addFiles(['lib/templates/addGroup.html','lib/templates/addGroup.js','lib/templates/showGroups.html','lib/templates/showGroups.js'], 'client');
   api.addFiles(['lib/templates/groupListItem.js','lib/templates/groupListItem.html','lib/templates/showGroup.html',
-    'lib/templates/showGroup.js','lib/templates/editGroup.js','lib/templates/editGroup.html'],'client');
+    'lib/templates/showGroup.js','lib/templates/editGroup.js','lib/templates/editGroup.html',
+    'lib/templates/manageRoles.html', 'lib/templates/manageRoles.js',
+    'lib/templates/addRole.html', 'lib/templates/addRole.js'],'client');
 });
 
 //Package.onTest(function(api) {
