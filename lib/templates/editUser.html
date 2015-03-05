@@ -3,10 +3,12 @@
         <table>
             <tr>
                 <td>
-                    {{#autoForm collection=collection doc=this id="createUserForm" type="update" validation="keyup"}}
+                    {{#autoForm collection=collection doc=this id="createUserForm" type="update"  validation="keyup"}}
                         <fieldset>
                             {{> afQuickField name="profile.fullname" autocomplete="off"}}
-                            {{> afQuickField name="emails.0.address" autocomplete="off"}}
+                            <!--{{> afQuickField name="emails.0.address" autocomplete="off"}}-->
+                            <label for="admin">Email</label>
+                            <input type="text" id="email" name="email" value="{{email}}" disabled/>
                             {{> afQuickField name="username" autocomplete="off"}}
                             <!--{{> afQuickField name="profile.admin"}}-->
                             {{#if isInRole 'admin,superAdmin'}}

@@ -3,7 +3,7 @@
         <table>
             <tr>
                 <td>
-                    {{#autoForm schema=userschema doc=this id="createUserForm"}}
+                    {{#autoForm schema=userschema doc=this type='disabled' id="createUserForm"}}
                         <fieldset>
                             {{> afQuickField name="profile.fullname" autocomplete="off"}}
                             {{> afQuickField name="emails.0.address" autocomplete="off"}}
@@ -20,7 +20,9 @@
             </tr>
         </table>
         <!-- </div> -->
+    {{#if allowedToEdit}}
         <a href="/editUser/{{_id}}">{{edit}}</a>
+    {{/if}}
         <a href="/showUsers">{{abort}}</a>
     {{/with}}
 </template>
