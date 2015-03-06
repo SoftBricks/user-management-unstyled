@@ -14,10 +14,12 @@
                             {{#if isInRole 'admin,superAdmin'}}
                                 {{#each currentRoles}}
                                     {{#if isField 'superAdmin'}}
-                                        <input type="checkbox" disabled readonly id="{{this.name}}" name="roles" checked="{{userHasRight}}">
+                                        <input type="checkbox" disabled readonly id="{{this.name}}" name="roles"
+                                               checked="{{userHasRight}}">
                                         <label for="admin">{{this.name}}</label>
                                     {{else}}
-                                        <input type="checkbox" id="{{this.name}}" name="roles" checked="{{userHasRight}}">
+                                        <input type="checkbox" id="{{this.name}}" name="roles"
+                                               checked="{{userHasRight}}">
                                         <label for="admin">{{this.name}}</label>
                                     {{/if}}
                                 {{/each}}
@@ -39,22 +41,33 @@
                             </div>
                         </fieldset>
                     {{/autoForm}}
-                    <img src="{{gravatar}}">
+
                 </td>
                 <td>
-                    <ul>
-                        {{#each roles}}
-                            <li>
-                                {{#if isField 'superAdmin'}}
-                                    <input type="checkbox" disabled readonly id="{{this.name}}" name="roles" checked="{{userHasRight}}">
-                                    <label for="admin">{{this.name}}</label>
-                                {{else}}
-                                    <input type="checkbox" id="{{this.name}}" name="roles" checked="{{userHasRight}}"/>
-                                    <label for="{{this.name}}">{{this.name}}</label>
-                                {{/if}}
-                            </li>
-                        {{/each}}
-                    </ul>
+                    <table>
+                        <tr>
+                            <td><img src="{{gravatar}}"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    {{#each roles}}
+                                        <li>
+                                            {{#if isField 'superAdmin'}}
+                                                <input type="checkbox" disabled readonly id="{{this.name}}" name="roles"
+                                                       checked="{{userHasRight}}">
+                                                <label for="admin">{{this.name}}</label>
+                                            {{else}}
+                                                <input type="checkbox" id="{{this.name}}" name="roles"
+                                                       checked="{{userHasRight}}"/>
+                                                <label for="{{this.name}}">{{this.name}}</label>
+                                            {{/if}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>
