@@ -34,7 +34,8 @@ Package.onUse(function(api) {
   api.addFiles(['lib/templates/groupListItem.js','lib/templates/groupListItem.html','lib/templates/showGroup.html',
     'lib/templates/showGroup.js','lib/templates/editGroup.js','lib/templates/editGroup.html',
     'lib/templates/manageRoles.html', 'lib/templates/manageRoles.js',
-    'lib/templates/addRole.html', 'lib/templates/addRole.js'],'client');
+    'lib/templates/addRole.html', 'lib/templates/addRole.js',
+    'lib/templates/addGroupRole.html', 'lib/templates/addGroupRole.js'],'client');
 });
 
 //Package.onTest(function(api) {

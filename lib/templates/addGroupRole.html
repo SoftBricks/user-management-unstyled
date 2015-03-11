@@ -1,0 +1,18 @@
+<template name="umAddGroupRole">
+    Roles
+    <table>
+        <tr>
+            <td>
+                <label>Add Group Role</label>
+                <input id="addGroupRole"/>
+                <button id="addGroupRoleButton" type="click" class="btn btn-primary">Add</button>
+            </td>
+        </tr>
+{{#each rolesInGroup}}
+    <tr>
+    {{name}}
+    </tr>
+{{/each}}
+    </table>
+    <a href="/editGroup/{{currentGroup}}">{{abort}}</a>
+</template>
