@@ -1,0 +1,11 @@
+<template name="umManageRoles">
+    <table border="2">
+        {{#each roles}}
+            <tr>
+                <td>{{name}} <button type="click" class="removeRole btn btn-default" id="{{name}}">Remove</button></td>
+            </tr>
+        {{/each}}
+    </table>
+
+    <a href="/addRole">Add</a>
+</template>

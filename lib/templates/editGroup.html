@@ -2,9 +2,8 @@
     {{#with group}}
         {{#autoForm schema=groupschema doc=this id="addGroupForm" type="method" meteormethod="updateGroup" validation="keyup"}}
             <fieldset>
-                <legend>Edit Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
-                {{> afQuickField name="leader" id="leader" autocomplete="off"}}
+                {{> afQuickField value =leaderEmail name="leader" id="leader" autocomplete="off"}}
                 <ul>
                     {{#each getLeaders}}
                         <li class="fullname">{{email}}</li>
@@ -44,9 +43,9 @@
                     {{/each}}
                 </ul>
                 <div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button id="removeGroup" type="click" class="btn btn-primary">Remove</button>
-                    <a href="/showGroup/{{_id}}">Back</a>
+                    <button type="submit" class="btn btn-primary">{{save}}</button>
+                    <button id="removeGroup" type="click" class="btn btn-primary">{{remove}}</button>
+                    <a href="/showGroup/{{_id}}">{{abort}}</a>
                 </div>
             </fieldset>
         {{/autoForm}}

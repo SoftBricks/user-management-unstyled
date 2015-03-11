@@ -2,11 +2,9 @@
     {{#with group}}
         {{#autoForm schema=groupschema doc=this id="addGroupForm"}}
             <fieldset>
-                <legend>Show Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
-                {{> afQuickField name="leader" autocomplete="off"}}
+                {{> afQuickField vale=leaderEmail name="leader" autocomplete="off"}}
                 {{> afQuickField value=parentGroupName name="parentGroup" autocomplete="off"}}
-                Users
                 <ul>
                     {{#each users}}
                         {{user}}
@@ -17,7 +15,7 @@
 
 
         <!-- </div> -->
-        <a href="/editGroup/{{_id}}">Edit</a>
-        <a href="/showGroups">Back</a>
+        <a href="/editGroup/{{_id}}">{{edit}}</a>
+        <a href="/showGroups">{{abort}}</a>
     {{/with}}
 </template>

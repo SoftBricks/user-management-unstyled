@@ -1,20 +1,28 @@
 <template name="umShowUser">
     {{#with user}}
-        {{#autoForm schema=userschema doc=this id="createUserForm"}}
-            <fieldset>
-                <legend>Show User</legend>
-                {{> afQuickField name="profile.fullname" autocomplete="off"}}
-                {{> afQuickField name="emails.0.address" autocomplete="off"}}
-                {{> afQuickField name="username" autocomplete="off"}}
-                {{> afQuickField name="profile.admin"}}
-                {{> afQuickField name="profile.activated"}}
-                {{> afQuickField name="profile.fields"}}
-            </fieldset>
-        {{/autoForm}}
-
-
+        <table>
+            <tr>
+                <td>
+                    {{#autoForm schema=userschema doc=this type='disabled' id="createUserForm"}}
+                        <fieldset>
+                            {{> afQuickField name="profile.fullname" autocomplete="off"}}
+                            {{> afQuickField name="emails.0.address" autocomplete="off"}}
+                            {{> afQuickField name="username" autocomplete="off"}}
+                            <!--{{> afQuickField name="profile.admin"}}-->
+                            {{> afQuickField name="profile.activated"}}
+                            {{> afQuickField name="profile.fields"}}
+                        </fieldset>
+                    {{/autoForm}}
+                </td>
+                <td>
+                    <img src="{{gravatar}}">
+                </td>
+            </tr>
+        </table>
         <!-- </div> -->
-        <a href="/editUser/{{_id}}">Edit</a>
-        <a href="/showUsers">Back</a>
+    {{#if allowedToEdit}}
+        <a href="/editUser/{{_id}}">{{edit}}</a>
+    {{/if}}
+        <a href="/showUsers">{{abort}}</a>
     {{/with}}
 </template>

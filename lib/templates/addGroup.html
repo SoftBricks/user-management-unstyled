@@ -2,7 +2,6 @@
     {{#if groupschema}}
         {{#autoForm schema=groupschema id="addGroupForm" type="method" meteormethod="createGroup" validation="keyup"}}
             <fieldset>
-                <legend>Create Group</legend>
                 {{> afQuickField name="groupname" autocomplete="off"}}
                 {{> afQuickField name="leader" id="leader" autocomplete="off"}}
                 <ul>
@@ -26,8 +25,8 @@
                     {{/each}}
                 </ul>
                 <div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-default">Reset</button>
+                    <button type="submit" class="btn btn-primary">{{save}}</button>
+                    <button type="reset" class="btn btn-default">{{abort}}</button>
                 </div>
             </fieldset>
         {{/autoForm}}
