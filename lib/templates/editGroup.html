@@ -24,12 +24,14 @@
                         <li class="parentGroup">{{groupname}}</li>
                     {{/each}}
                 </ul>
+
                 <!--{{> afQuickField name="users" id=this.name autocomplete="off"}}-->
                 <!--<ul>-->
                     <!--{{#each getUsersForGroup}}-->
                         <!--<li class="user">{{email}}</li>-->
                     <!--{{/each}}-->
                 <!--</ul>-->
+                
                 <span>Users</span><input id="users"/>
                 <ul class="results" style="background-color: white">
                     {{#each getUsersForGroup}}
