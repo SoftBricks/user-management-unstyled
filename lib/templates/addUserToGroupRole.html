@@ -1,0 +1,36 @@
+<Template name="umAddUserToGroupRole">
+    <table>
+        <tr>
+            <td>
+                Current User Roles
+                <table>
+                    {{# each userRoles}}
+                        <tr>
+                            {{name}}
+                        </tr>
+                    {{/each}}
+                </table>
+            </td>
+            <td style="padding-left:10px;">
+                All available Group Roles
+                <table>
+                    {{# each rolesInGroup}}
+                        {{#if userIsInRole name}}
+                            <tr>
+                                <td>
+                                    <input name="roles" id="{{name}}" type="checkbox" checked/>{{name}}
+                                </td>
+                            </tr>
+                        {{else}}
+                            <tr>
+                                <td>
+                                    <input name="roles" type="checkbox" id="{{name}}"/>{{name}}
+                                </td>
+                            </tr>
+                        {{/if}}
+                    {{/each}}
+                </table>
+            </td>
+        </tr>
+    </table>
+</Template>

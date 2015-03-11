@@ -35,7 +35,8 @@ Package.onUse(function(api) {
     'lib/templates/showGroup.js','lib/templates/editGroup.js','lib/templates/editGroup.html',
     'lib/templates/manageRoles.html', 'lib/templates/manageRoles.js',
     'lib/templates/addRole.html', 'lib/templates/addRole.js',
-    'lib/templates/addGroupRole.html', 'lib/templates/addGroupRole.js'],'client');
+    'lib/templates/addGroupRole.html', 'lib/templates/addGroupRole.js',
+    'lib/templates/addUserToGroupRole.html', 'lib/templates/addUserToGroupRole.js'],'client');
 });
 
 //Package.onTest(function(api) {
