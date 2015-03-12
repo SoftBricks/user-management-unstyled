@@ -2,10 +2,10 @@
     <table border="2">
         {{#each roles}}
             <tr>
-                <td>{{name}} <button type="click" class="removeRole btn btn-default" id="{{name}}">Remove</button></td>
+                <td>{{name}} <button type="click" class="removeRole btn btn-default" id="{{name}}">{{remove}}</button></td>
             </tr>
         {{/each}}
     </table>
 
-    <a href="/addRole">Add</a>
+    <a href="/addRole">{{add}}</a>
 </template>

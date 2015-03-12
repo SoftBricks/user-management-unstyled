@@ -2,7 +2,7 @@
     <table>
         <tr>
             <td>
-                Current User Roles
+                {{userRolesI}}
                 <table>
                     {{# each userRoles}}
                         <tr>
@@ -12,7 +12,7 @@
                 </table>
             </td>
             <td style="padding-left:10px;">
-                All available Group Roles
+                {{availableGroupRoles}}
                 <table>
                     {{# each rolesInGroup}}
                         {{#if userIsInRole name}}

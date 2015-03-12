@@ -1,16 +1,16 @@
 <template name="umAddGroupRole">
-    Roles
+    {{roles}}
     <table>
         <tr>
             <td>
-                <label>Add Group Role</label>
+                <label>{{addRole}}</label>
                 <input id="addGroupRole"/>
-                <button id="addGroupRoleButton" type="click" class="btn btn-primary">Add</button>
+                <button id="addGroupRoleButton" type="click" class="btn btn-primary">{{add}}</button>
             </td>
         </tr>
 {{#each rolesInGroup}}
     <tr>
-    {{name}}<button id="{{name}}" type="click" class="btn btn-primary removeRole">Remove</button>
+    {{name}}<button id="{{name}}" type="click" class="btn btn-primary removeRole">{{remove}}</button>
     </tr>
 {{/each}}
     </table>
